@@ -77,8 +77,16 @@ public class BoardController : MonoBehaviour {
         
         }
 
-
     }
+
+    private Vector3 SelectGridPosition()
+    {
+        int randomIndex = Random.Range(0, obstaclesGrid.Count);
+        Vector3 randomPosition = obstaclesGrid[randomIndex];
+        obstaclesGrid.RemoveAt(randomIndex);
+        return randomPosition;
+    }
+
     public void SetupLever()
 
     {

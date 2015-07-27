@@ -101,9 +101,9 @@ public class BoardController : MonoBehaviour {
         SetupGameBoard();
         SetRandomObstaclesOnGrid(wallObstacles, 3, 9);
         SetRandomObstaclesOnGrid(foodItems, 1, 5);
-        SetRandomObstaclesOnGrid(enemies, 1, 3);
+        SetRandomObstaclesOnGrid(enemies, 1, 4);
         Instantiate(exit, new Vector3(columns - 10, rows - 10, 0f), Quaternion.identity);
         Instantiate(exit, new Vector3(columns - 2, rows - 2, 0f), Quaternion.identity);
-            
+
     }
 }

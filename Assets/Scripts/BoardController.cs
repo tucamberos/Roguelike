@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class BoardController : MonoBehaviour {
 
@@ -10,15 +11,30 @@ public class BoardController : MonoBehaviour {
     public GameObject[] outerWalls;
 
     private Transform gameBoard;
+    private List<Vector3> obstaclesGrid;
+
 	
-	void Start () {
+	void Awake () {
+        obstaclesGrid = new List<Vector3>();
 	
 	}
-	
 	
 	void Update () {
 	
 	}
+    private void InitializeObstaclesPositions()
+    {
+        obstaclesGrid.Clear();
+        for (int x = 2; x < columns - 2; x++)
+        {
+
+            for (int y = 2; y < rows - 2; y++)
+            {
+                obstaclesGrid.Add(new Vector3(x, y, 0f));
+            }
+        }
+    }
+
     private void SetupGameBoard()
     {
         gameBoard = new GameObject("Game Board").transform;
@@ -45,7 +61,9 @@ public class BoardController : MonoBehaviour {
 
     }
     public void SetupLever()
+
     {
+        InitializeObstaclesPositions();
         SetupGameBoard();
     }
 }

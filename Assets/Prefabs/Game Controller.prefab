@@ -51,6 +51,10 @@ MonoBehaviour:
   - {fileID: 135076, guid: 69ca6529668e84241802c350c98cfa5a, type: 2}
   - {fileID: 186374, guid: 7a14e731ed802e342afbd6ce37b4cade, type: 2}
   - {fileID: 191358, guid: eddab7c081803584c9a7e346a3a37e09, type: 2}
+  outerWalls:
+  - {fileID: 152118, guid: 2b2ad0e1c4ef3bd4a899d3e2fac5f084, type: 2}
+  - {fileID: 136666, guid: bc9831abdc092b248a45153198749f04, type: 2}
+  - {fileID: 113360, guid: cdd583a7b288a7a4e81c10e406a0cae6, type: 2}
 --- !u!114 &11416362
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -42,7 +42,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   columns: 10
   rows: 10
-  floor: {fileID: 100936, guid: 497b5287b0b6f0141860e9bf9ea878fc, type: 2}
+  floors:
+  - {fileID: 100936, guid: 497b5287b0b6f0141860e9bf9ea878fc, type: 2}
+  - {fileID: 132722, guid: 7b46e4d6657c2594491dd81789226c02, type: 2}
+  - {fileID: 199354, guid: cf23e79f0e4d3ea40a9a50352e3b5978, type: 2}
+  - {fileID: 193540, guid: 5893f744ffa0e9347bf0e5cc9cd58eeb, type: 2}
+  - {fileID: 122254, guid: ef18c09fb45f5e4458f0383ac4f55eca, type: 2}
+  - {fileID: 135076, guid: 69ca6529668e84241802c350c98cfa5a, type: 2}
+  - {fileID: 186374, guid: 7a14e731ed802e342afbd6ce37b4cade, type: 2}
+  - {fileID: 191358, guid: eddab7c081803584c9a7e346a3a37e09, type: 2}
 --- !u!114 &11416362
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -10,6 +10,7 @@ public class BoardController : MonoBehaviour {
     public GameObject[] floors;
     public GameObject[] outerWalls;
     public GameObject[] wallObstacles;
+    public GameObject[] foodItems;
 
     private Transform gameBoard;
     private List<Vector3> obstaclesGrid;
@@ -96,5 +97,6 @@ public class BoardController : MonoBehaviour {
         InitializeObstaclesPositions();
         SetupGameBoard();
         SetRandomObstaclesOnGrid(wallObstacles, 3, 9);
+        SetRandomObstaclesOnGrid(foodItems, 1, 5);
     }
 }

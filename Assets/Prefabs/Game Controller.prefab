@@ -64,6 +64,9 @@ MonoBehaviour:
   - {fileID: 187694, guid: 7fd2b3a720691004c81dfd98abded2b7, type: 2}
   - {fileID: 190862, guid: a24174279de64f040a2a0449b232102c, type: 2}
   - {fileID: 129748, guid: 23da17cb0dfbe2f4389c5b22f193b42e, type: 2}
+  foodItems:
+  - {fileID: 158208, guid: 498a88d35d6f2fb4a87c864b734cdb18, type: 2}
+  - {fileID: 135684, guid: 287674b9dd1e984479c006c2fc832b69, type: 2}
 --- !u!114 &11416362
 MonoBehaviour:
   m_ObjectHideFlags: 1

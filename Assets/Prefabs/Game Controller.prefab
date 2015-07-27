@@ -55,6 +55,15 @@ MonoBehaviour:
   - {fileID: 152118, guid: 2b2ad0e1c4ef3bd4a899d3e2fac5f084, type: 2}
   - {fileID: 136666, guid: bc9831abdc092b248a45153198749f04, type: 2}
   - {fileID: 113360, guid: cdd583a7b288a7a4e81c10e406a0cae6, type: 2}
+  wallObstacles:
+  - {fileID: 107620, guid: 6d50efb250c693e4b9660e773f20a33f, type: 2}
+  - {fileID: 126498, guid: 2da9228f9ba127a4191066d356a6d18b, type: 2}
+  - {fileID: 142396, guid: e99821caa12ac2f4ea8173b5cf020af9, type: 2}
+  - {fileID: 136680, guid: c6ba0da6715c6464994f90809cdd3d3a, type: 2}
+  - {fileID: 184878, guid: 2d5c3b8350e046b4e8dc983215d00d15, type: 2}
+  - {fileID: 187694, guid: 7fd2b3a720691004c81dfd98abded2b7, type: 2}
+  - {fileID: 190862, guid: a24174279de64f040a2a0449b232102c, type: 2}
+  - {fileID: 129748, guid: 23da17cb0dfbe2f4389c5b22f193b42e, type: 2}
 --- !u!114 &11416362
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -9,6 +9,7 @@ public class BoardController : MonoBehaviour {
 
     public GameObject[] floors;
     public GameObject[] outerWalls;
+    public GameObject[] wallObstacles;
 
     private Transform gameBoard;
     private List<Vector3> obstaclesGrid;
@@ -73,10 +74,12 @@ public class BoardController : MonoBehaviour {
 
         for (int index = 0; index < obstacleCount; index++)
         {
-            //Generate a random position and use it to generate a random obstacle tile
+            
+            GameObject selectedObstacle = obstaclesArrary[Random.Range(0, obstaclesArrary.Length)];
+            Instantiate(selectedObstacle, SelectGridPosition(), Quaternion.identity);
         
         }
-
+    
     }
 
     private Vector3 SelectGridPosition()
@@ -92,5 +95,6 @@ public class BoardController : MonoBehaviour {
     {
         InitializeObstaclesPositions();
         SetupGameBoard();
+        SetRandomObstaclesOnGrid(wallObstacles, 3, 9);
     }
 }

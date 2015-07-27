@@ -50,3 +50,6 @@ TagManager:
   - name: food
     uniqueID: 2478798581
     locked: 0
+  - name: Characters
+    uniqueID: 3579431355
+    locked: 0

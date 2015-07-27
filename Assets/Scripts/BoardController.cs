@@ -60,6 +60,25 @@ public class BoardController : MonoBehaviour {
         }
 
     }
+
+    private void SetRandomObstaclesOnGrid(GameObject[] obstaclesArrary, int minimum, int maximum)
+    {
+        int obstacleCount = Random.Range(minimum, maximum + 1);
+
+        if(obstacleCount > obstaclesGrid.Count)
+        {
+            obstacleCount = obstaclesGrid.Count;
+
+        }
+
+        for (int index = 0; index < obstacleCount; index++)
+        {
+            //Generate a random position and use it to generate a random obstacle tile
+        
+        }
+
+
+    }
     public void SetupLever()
 
     {

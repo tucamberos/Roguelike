@@ -70,6 +70,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 143732, guid: 870bfd90a74f19743862459053f78a98, type: 2}
   - {fileID: 164530, guid: ef38877f233e9d1408bfb1d6db710c8b, type: 2}
+  exit: {fileID: 149596, guid: cf97fd13a5bf07f499d9c89c92d1595e, type: 2}
 --- !u!114 &11416362
 MonoBehaviour:
   m_ObjectHideFlags: 1

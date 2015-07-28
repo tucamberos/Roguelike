@@ -43,8 +43,8 @@ public class MovingObject : MonoBehaviour {
 
         do
         {
-            remainingDistanceToEndPosition = (rigidBody.position = endPosition).sqrMagnitude;
-            Vector2 updatedPosition = Vector2.MoveTowards(rigidBody.position, endPosition, inverseMoveTime   * Time.deltaTime);
+            remainingDistanceToEndPosition = (rigidBody.position - endPosition).sqrMagnitude;
+            Vector2 updatedPosition = Vector2.MoveTowards(rigidBody.position, endPosition, inverseMoveTime * Time.deltaTime);
             rigidBody.MovePosition(updatedPosition);
             yield return null;
 

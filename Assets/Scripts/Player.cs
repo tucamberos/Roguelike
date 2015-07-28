@@ -1,36 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player : MovingObject {
+public class Enemy1 : MonoBehaviour {
 
+	// Use this for initialization
+	void Start () {
 	
+	}
+	
+	// Update is called once per frame
 	void Update () {
-        if (!GameController.Instance.isPlayerTurn)
-        {
-            return;
-        }
-
-
-        int xAxis = 0;
-        int yAxis = 0;
-
-        xAxis = (int)Input.GetAxisRaw("Horizontal");
-        yAxis = (int)Input.GetAxisRaw("Vertical");
-
-        if(xAxis != 0)
-        {
-            yAxis = 0;
-        }
-    
-
-        if(xAxis != 0 || yAxis != 0)
-        {
-            CanObjectMove(xAxis, yAxis);
-            GameController.Instance.isPlayerTurn = false;
-
-
-        }
-
-
-    }
+	
+	}
 }

@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemy : MovingObject { 
+public class Enemy : MovingObject {
+
+    public bool isEnemyStrong;
 
 
     private Transform player;

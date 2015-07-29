@@ -18,6 +18,18 @@ public class MovingObject : MonoBehaviour {
         inverseMoveTime = 1.0f / moveTime;
 	}
 
+    protected virtual void Move(int xDirection, int yDirection)
+    {
+        bool canMove = CanObjectMove(xDirection, yDirection);
+
+        if (canMove)
+        {
+            return;
+        }
+            
+        //Handle any collisions that occorred
+    }
+
     protected bool CanObjectMove(int xDirection, int yDirection)
     {
         Vector2 startPosition = rigidBody.position;

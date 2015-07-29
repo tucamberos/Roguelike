@@ -25,7 +25,7 @@ public class Player : MovingObject {
 
         if(xAxis != 0 || yAxis != 0)
         {
-            CanObjectMove(xAxis, yAxis);
+            Move(xAxis, yAxis);
             GameController.Instance.isPlayerTurn = false;
 
 

@@ -12,6 +12,7 @@ GameObject:
   - 95: {fileID: 9556416}
   - 61: {fileID: 6108552}
   - 50: {fileID: 5057160}
+  - 114: {fileID: 11425022}
   m_Layer: 8
   m_Name: Enemy Weak
   m_TagString: Untagged
@@ -77,6 +78,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11425022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b1ca57d9443b94bb88c2b27b40992d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveTime: .100000001
 --- !u!212 &21272750
 SpriteRenderer:
   m_ObjectHideFlags: 1

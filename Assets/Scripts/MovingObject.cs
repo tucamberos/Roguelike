@@ -49,15 +49,14 @@ public abstract class MovingObject : MonoBehaviour {
 
         if (hit.transform == null)
         {
+             
+            StartCoroutine(SmoothMovementRoutine(endPosition));
             return true;
-        }
+    }
 
-        StartCoroutine(SmoothMovementRoutine(endPosition));
-        return true;
-        }
-  
+        return false;
+ }
 
-        
     protected IEnumerator SmoothMovementRoutine(Vector2 endPosition)
     {
         float remainingDistanceToEndPosition;

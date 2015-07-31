@@ -10,6 +10,8 @@ GameObject:
   - 4: {fileID: 440864}
   - 212: {fileID: 21255872}
   - 61: {fileID: 6196780}
+  - 114: {fileID: 11449820}
+  - 114: {fileID: 11418816}
   m_Layer: 8
   m_Name: Wall 8
   m_TagString: Untagged
@@ -42,6 +44,30 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &11418816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144a6e89f04f4f2408d6f48199bb411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 2
+--- !u!114 &11449820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d09e23f804bad7d4a80941dc1ae7cfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveTime: .100000001
 --- !u!212 &21255872
 SpriteRenderer:
   m_ObjectHideFlags: 1

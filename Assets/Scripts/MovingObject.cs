@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MovingObject : MonoBehaviour {
+public abstract class MovingObject : MonoBehaviour {
 
     public float moveTime = 0.1f;
 
@@ -11,43 +11,52 @@ public class MovingObject : MonoBehaviour {
     private float inverseMoveTime;
 
 
-	protected virtual void Start () {
+    protected virtual void Start() {
         boxCollider = GetComponent<BoxCollider2D>();
         rigidBody = GetComponent<Rigidbody2D>();
         CollisionLayer = LayerMask.GetMask("Collision Layer");
         inverseMoveTime = 1.0f / moveTime;
-	}
+    }
 
-    protected virtual void Move(int xDirection, int yDirection)
+    protected virtual void Move<T>(int xDirection, int yDirection)
     {
-        bool canMove = CanObjectMove(xDirection, yDirection);
+
+        RaycastHit2D hit;
+        bool canMove = CanObjectMove(xDirection, yDirection, out hit);
 
         if (canMove)
         {
             return;
         }
-            
-        //Handle any collisions that occorred
+
+        T hitComponent = hit.transform.GetComponent<T>();
+
+        if (hitComponent != null)
+        {
+            HandleCollision(hitComponent);
+        }
+
     }
 
-    protected bool CanObjectMove(int xDirection, int yDirection)
+    protected bool CanObjectMove(int xDirection, int yDirection, out RaycastHit2D hit)
     {
         Vector2 startPosition = rigidBody.position;
         Vector2 endPosition = startPosition + new Vector2(xDirection, yDirection);
 
         boxCollider.enabled = false;
-        RaycastHit2D hit = Physics2D.Linecast(startPosition, endPosition, CollisionLayer);
+        hit = Physics2D.Linecast(startPosition, endPosition, CollisionLayer);
         boxCollider.enabled = true;
 
         if (hit.transform == null)
         {
-
-            StartCoroutine(SmoothMovementRoutine(endPosition));
             return true;
         }
 
-        return false;
-    }
+        StartCoroutine(SmoothMovementRoutine(endPosition));
+        return true;
+        }
+  
+
         
     protected IEnumerator SmoothMovementRoutine(Vector2 endPosition)
     {
@@ -63,7 +72,10 @@ public class MovingObject : MonoBehaviour {
         } while (remainingDistanceToEndPosition > float.Epsilon);     
     }
 
-	void Update () {
-	
-	}
+    protected abstract void HandleCollision<T>(T component);
+
 }
+
+
+
+

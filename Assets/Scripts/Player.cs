@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class Player : MovingObject {
 
 	
@@ -25,12 +26,14 @@ public class Player : MovingObject {
 
         if(xAxis != 0 || yAxis != 0)
         {
-            Move(xAxis, yAxis);
+            Move<Wall>(xAxis, yAxis);
             GameController.Instance.isPlayerTurn = false;
-
 
         }
 
+    }
+    protected override void HandleCollision<T>(T component)
+    {
 
     }
 }

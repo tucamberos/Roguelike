@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class Enemy : MovingObject {
 
     public bool isEnemyStrong;
@@ -71,10 +72,17 @@ public class Enemy : MovingObject {
 
         }
 
-        Move(xAxis, yAxis);
+         Move<Player>(xAxis, yAxis);
         skipCurrentMove = true;
     }
+
+    protected override void HandleCollision<T>(T component)
+    {
+        
+    }
 }
+
+
 
               
 

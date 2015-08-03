@@ -5,16 +5,18 @@ using System.Collections;
 public class Enemy : MovingObject {
 
     public bool isEnemyStrong;
+    public int attackDamage;
 
     private bool skipCurrentMove;
     private Transform player;
-
+    private Animator animator;
 
     protected override void Start() { 
     
         GameController.Instance.AddEnemyToList(this);
         player = GameObject.FindGameObjectWithTag("Player").transform;
         skipCurrentMove = true;
+        animator = GetComponent<Animator>();
         base.Start();
     }
 
@@ -78,7 +80,9 @@ public class Enemy : MovingObject {
 
     protected override void HandleCollision<T>(T component)
     {
-        
+        Player player = component as Player;
+        player.TakeDamage(attackDamage);
+        animator.SetTrigger("enemyAttack");  
     }
 }
 

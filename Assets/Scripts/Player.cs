@@ -4,9 +4,19 @@ using System.Collections;
 
 public class Player : MovingObject {
 
-	
+    private Animator animator;
+    private int playerHealth = 50;
+    private int attackPower = 1;
+
+    protected override void Start()
+    {
+        base.Start();
+        animator = GetComponent<Animator>();
+
+    }
+
 	void Update () {
-        if (!GameController.Instance.isPlayerTurn)
+        if(!GameController.Instance.isPlayerTurn)
         {
             return;
         }
@@ -35,6 +45,16 @@ public class Player : MovingObject {
     protected override void HandleCollision<T>(T component)
     {
         Wall wall = component as Wall;
-        wall.DamageWall(1);
+        animator.SetTrigger("playeAttack");
+        wall.DamageWall(attackPower);
     }
+
+    public void TakeDamage(int damagedReceived)
+    {
+        playerHealth -= damagedReceived;
+        animator.SetTrigger("playerHurt");
+        Debug.Log("Player Health: " + playerHealth);
+    }
+
+     
 }
